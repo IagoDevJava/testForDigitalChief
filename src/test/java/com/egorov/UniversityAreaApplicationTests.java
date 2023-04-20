@@ -1,4 +1,4 @@
-package com.egorov.universityarea;
+package com.egorov;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
