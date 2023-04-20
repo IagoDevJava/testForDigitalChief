@@ -18,7 +18,7 @@
 	- статус работы;
 	- список факультетов;
 	- форма организации (гос. or комм.).
-Пользователь имеет следующие свойства:
+Сотрудник имеет следующие свойства:
 	- id;
 	- имя;
 	- должность.
@@ -83,7 +83,7 @@ FacultyAdminController:
 	``` DELETE "/universities/faculties/{facultyId}" ```
 	удалить все факультеты
 	``` DELETE "/universities/faculties" ```
-UserAdminController:
+EmployeeAdminController:
 	создать пользователя
 	``` POST "/users" ```
 	изменить пользователя по айди
