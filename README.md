@@ -1,4 +1,4 @@
-# testForDigitalChief ПРОВЕРКА ТЕСТОВ
+# testForDigitalChief
 
 ## Это репозиторий тестового задания для вакансии JAVA TRAINEE компании Digital Chief
 #### Архитектура монолитная. Подключена БД (PostgreSQL) с помощью Hibernate ORM. Клиент-серверная структура на основе REST. Проект собран на Maven. Использован JUnit 5, для тестирования функционала.
