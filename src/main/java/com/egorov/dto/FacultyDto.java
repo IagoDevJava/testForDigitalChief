@@ -1,6 +1,5 @@
 package com.egorov.dto;
 
-import com.egorov.enumModel.WorkStatus;
 import lombok.Builder;
 import lombok.Data;
 
@@ -10,6 +9,6 @@ public class FacultyDto {
     Long id;
     String name;
     Long employeeId;
-    WorkStatus workStatus;
+    String workStatus;
     Long universityId;
 }

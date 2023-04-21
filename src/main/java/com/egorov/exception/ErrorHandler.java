@@ -18,4 +18,10 @@ public class ErrorHandler {
     public ErrorResponse handleUniversityNotFoundException(final UniversityNotFoundException e) {
         return new ErrorResponse(e.getMessage());
     }
+
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ErrorResponse handleFacultyNotFoundException(final FacultyNotFoundException e) {
+        return new ErrorResponse(e.getMessage());
+    }
 }

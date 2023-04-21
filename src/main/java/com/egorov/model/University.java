@@ -1,7 +1,5 @@
 package com.egorov.model;
 
-import com.egorov.enumModel.TypeUniversity;
-import com.egorov.enumModel.WorkStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -23,9 +21,13 @@ public class University {
     @Column(name = "rector_id")
     Long employeeId;
     @Column(nullable = false)
-    TypeUniversity type;
+    String type;
     @Column(name = "work_status")
-    WorkStatus workStatus;
+    String workStatus;
+
+    public void setId(Long id) {
+        if (id != null) this.id = id;
+    }
 
     public void setName(String name) {
         if (name != null) this.name = name;
@@ -35,11 +37,11 @@ public class University {
         if (employeeId != null) this.employeeId = employeeId;
     }
 
-    public void setType(TypeUniversity type) {
+    public void setType(String type) {
         if (type != null) this.type = type;
     }
 
-    public void setWorkStatus(WorkStatus workStatus) {
+    public void setWorkStatus(String workStatus) {
         if (workStatus != null) this.workStatus = workStatus;
     }
 }

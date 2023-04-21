@@ -4,6 +4,7 @@ import com.egorov.dto.UniversityDto;
 import com.egorov.exception.UniversityNotFoundException;
 import com.egorov.model.University;
 import com.egorov.repository.UniversityRepository;
+import com.egorov.repository.UniversityRepositoryImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +19,7 @@ import static com.egorov.mapper.UniversityMapper.toUniversityDtoList;
 @Transactional(readOnly = true)
 public class UniversityAdminServiceImpl implements UniversityAdminService {
     private final UniversityRepository universityRepository;
+    private final UniversityRepositoryImpl universityRepositoryImpl;
 
     /**
      * создать университет
@@ -51,15 +53,7 @@ public class UniversityAdminServiceImpl implements UniversityAdminService {
      */
     @Override
     public UniversityDto updateById(Long universityId, University university) {
-        University universityById = universityRepository.findById(universityId)
-                .orElseThrow(() -> new UniversityNotFoundException("University not found"));
-
-        universityById.setName(university.getName());
-        universityById.setEmployeeId(university.getEmployeeId());
-        universityById.setType(university.getType());
-        universityById.setWorkStatus(university.getWorkStatus());
-
-        return toUniversityDto(universityById);
+        return universityRepositoryImpl.update(universityId, university);
     }
 
     /**
