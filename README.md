@@ -57,48 +57,44 @@ public class UniversityAreaApplication {
 #### Список эндпойнтов:
 
 Модератор:
-UniversityAdminController:
-	получить список университетов
+- UniversityAdminController:
+	- получить список университетов
 	``` GET "/universities" ```
-	получить университет по айди
+	- получить университет по айди
 	``` GET "/universities/{universityId}" ```
-	создать университет
+	- создать университет
 	``` POST "/universities" ```
-	изменить университет по айди
+	- изменить университет по айди
 	``` PATCH "/universities/{universityId}" ```
-	удалить университет по айди
+	- удалить университет по айди
 	``` DELETE "/universities/{universityId}" ```
-	удалить все университеты
+	- удалить все университеты
 	``` DELETE "/universities" ```
-FacultyAdminController:
-	получить список факультетов
+- FacultyAdminController:
+	- получить список факультетов
 	``` GET "/universities/faculties" ```
-	получить факультет по айди
+	- получить факультет по айди
 	``` GET "/universities/faculties/{facultyId}" ```
-	создать факультет
+	- создать факультет
 	``` POST "/universities/faculties" ```
-	изменить факультет по айди
+	- изменить факультет по айди
 	``` PATCH "/universities/faculties/{facultyId}" ```
-	удалить факультет по айди
+	- удалить факультет по айди
 	``` DELETE "/universities/faculties/{facultyId}" ```
-	удалить все факультеты
+	- удалить все факультеты
 	``` DELETE "/universities/faculties" ```
-EmployeeAdminController:
-	создать пользователя
+- EmployeeAdminController:
+	- создать пользователя
 	``` POST "/users" ```
-	изменить пользователя по айди
-	``` PATCH "/users/{userId}" ```
-	удалить пользователя по айди
-	``` DELETE "/users/{userId}" ```
 
 Пользователь:
-UniversityPublicController:
-	получить список университетов
+- UniversityPublicController:
+	- получить список университетов
 	``` GET "/universities" ```
-	получить университет по айди
+	- получить университет по айди
 	``` GET "/universities/{universityId}" ```
-FacultyPublicController:
-	получить список факультетов
+- FacultyPublicController:
+	- получить список факультетов
 	``` GET "/universities/faculties" ```
-	получить факультет по айди
+	- получить факультет по айди
 	``` GET "/universities/faculties/{facultyId}" ```
