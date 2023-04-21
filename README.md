@@ -87,15 +87,3 @@ public class UniversityAreaApplication {
 - EmployeeAdminController:
 	- создать пользователя
 	``` POST "/users" ```
-
-Пользователь:
-- UniversityPublicController:
-	- получить список университетов
-	``` GET "/universities" ```
-	- получить университет по айди
-	``` GET "/universities/{universityId}" ```
-- FacultyPublicController:
-	- получить список факультетов
-	``` GET "/universities/faculties" ```
-	- получить факультет по айди
-	``` GET "/universities/faculties/{facultyId}" ```
