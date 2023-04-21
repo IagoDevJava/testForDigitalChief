@@ -52,7 +52,7 @@ public class UniversityAreaApplication {
 
 #### ER-диаграмма базы данных для приложения:
 
-![This is ER-diagramme]()
+![This is ER-diagramme](UniversityArea.png)
 
 #### Список эндпойнтов:
 
