@@ -25,6 +25,6 @@ public class EmployeeAdminController {
      */
     @PostMapping()
     public ResponseEntity<EmployeeDto> save(@RequestBody @Valid Employee employee) {
-        return new ResponseEntity<>(employeeAdminService.save(employee), HttpStatus.OK);
+        return ResponseEntity.ok(employeeAdminService.save(employee));
     }
 }

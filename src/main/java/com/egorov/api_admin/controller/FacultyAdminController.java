@@ -24,7 +24,7 @@ public class FacultyAdminController {
     @PostMapping()
     public ResponseEntity<FacultyDto> save(@RequestBody @Valid Faculty faculty,
                                            @PositiveOrZero @PathVariable Long universityId) {
-        return new ResponseEntity<>(facultyAdminService.save(faculty, universityId), HttpStatus.OK);
+        return ResponseEntity.ok(facultyAdminService.save(faculty, universityId));
     }
 
     /**
@@ -32,7 +32,7 @@ public class FacultyAdminController {
      */
     @GetMapping()
     public ResponseEntity<List<FacultyDto>> getFaculties(@PositiveOrZero @PathVariable Long universityId) {
-        return new ResponseEntity<>(facultyAdminService.getAll(universityId), HttpStatus.OK);
+        return ResponseEntity.ok(facultyAdminService.getAll(universityId));
     }
 
     /**
@@ -41,7 +41,7 @@ public class FacultyAdminController {
     @GetMapping("/{facultyId}")
     public ResponseEntity<FacultyDto> getFacultyById(@PositiveOrZero @PathVariable Long facultyId,
                                                      @PositiveOrZero @PathVariable Long universityId) {
-        return new ResponseEntity<>(facultyAdminService.getById(universityId, facultyId), HttpStatus.OK);
+        return ResponseEntity.ok(facultyAdminService.getById(universityId, facultyId));
     }
 
     /**
@@ -51,8 +51,7 @@ public class FacultyAdminController {
     public ResponseEntity<FacultyDto> updateFacultyById(@PositiveOrZero @PathVariable Long facultyId,
                                                         @RequestBody Faculty faculty,
                                                         @PositiveOrZero @PathVariable Long universityId) {
-        return new ResponseEntity<>(facultyAdminService
-                .updateById(facultyId, faculty, universityId), HttpStatus.OK);
+        return ResponseEntity.ok(facultyAdminService.updateById(facultyId, faculty, universityId));
     }
 
     /**

@@ -23,7 +23,7 @@ public class UniversityAdminController {
      */
     @PostMapping()
     public ResponseEntity<UniversityDto> save(@RequestBody @Valid University university) {
-        return new ResponseEntity<>(universityAdminService.save(university), HttpStatus.OK);
+        return ResponseEntity.ok(universityAdminService.save(university));
     }
 
     /**
@@ -31,7 +31,7 @@ public class UniversityAdminController {
      */
     @GetMapping()
     public ResponseEntity<List<UniversityDto>> getUniversities() {
-        return new ResponseEntity<>(universityAdminService.getAll(), HttpStatus.OK);
+        return ResponseEntity.ok(universityAdminService.getAll());
     }
 
     /**
@@ -39,7 +39,7 @@ public class UniversityAdminController {
      */
     @GetMapping("/{universityId}")
     public ResponseEntity<UniversityDto> getUniversityById(@PositiveOrZero @PathVariable Long universityId) {
-        return new ResponseEntity<>(universityAdminService.getById(universityId), HttpStatus.OK);
+        return ResponseEntity.ok(universityAdminService.getById(universityId));
     }
 
     /**
@@ -48,7 +48,7 @@ public class UniversityAdminController {
     @PatchMapping("/{universityId}")
     public ResponseEntity<UniversityDto> updateUniversityById(@PositiveOrZero @PathVariable Long universityId,
                                                               @RequestBody University university) {
-        return new ResponseEntity<>(universityAdminService.updateById(universityId, university), HttpStatus.OK);
+        return ResponseEntity.ok(universityAdminService.updateById(universityId, university));
     }
 
     /**
