@@ -648,7 +648,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/admin/universities/1/faculties",
+							"raw": "http://localhost:8080/admin/universities/4/faculties",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -657,7 +657,7 @@
 							"path": [
 								"admin",
 								"universities",
-								"1",
+								"4",
 								"faculties"
 							]
 						}
@@ -697,7 +697,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/admin/universities/1/faculties",
+							"raw": "http://localhost:8080/admin/universities/4/faculties",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -706,7 +706,7 @@
 							"path": [
 								"admin",
 								"universities",
-								"1",
+								"4",
 								"faculties"
 							]
 						}
@@ -737,7 +737,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/admin/universities/1/faculties/1",
+							"raw": "http://localhost:8080/admin/universities/4/faculties/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -746,7 +746,7 @@
 							"path": [
 								"admin",
 								"universities",
-								"1",
+								"4",
 								"faculties",
 								"1"
 							]
@@ -787,7 +787,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/admin/universities/1/faculties/1",
+							"raw": "http://localhost:8080/admin/universities/4/faculties/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -796,7 +796,7 @@
 							"path": [
 								"admin",
 								"universities",
-								"1",
+								"4",
 								"faculties",
 								"1"
 							]
@@ -837,7 +837,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/admin/universities/1/faculties",
+							"raw": "http://localhost:8080/admin/universities/4/faculties",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -846,7 +846,7 @@
 							"path": [
 								"admin",
 								"universities",
-								"1",
+								"4",
 								"faculties"
 							]
 						}
@@ -881,7 +881,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/admin/universities/1/faculties",
+							"raw": "http://localhost:8080/admin/universities/4/faculties",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -890,7 +890,7 @@
 							"path": [
 								"admin",
 								"universities",
-								"1",
+								"4",
 								"faculties"
 							]
 						}
@@ -916,7 +916,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/admin/universities/1/faculties/2",
+							"raw": "http://localhost:8080/admin/universities/4/faculties/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -925,7 +925,7 @@
 							"path": [
 								"admin",
 								"universities",
-								"1",
+								"4",
 								"faculties",
 								"2"
 							]
@@ -952,7 +952,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/admin/universities/1/faculties",
+							"raw": "http://localhost:8080/admin/universities/4/faculties",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -961,7 +961,7 @@
 							"path": [
 								"admin",
 								"universities",
-								"1",
+								"4",
 								"faculties"
 							]
 						}
