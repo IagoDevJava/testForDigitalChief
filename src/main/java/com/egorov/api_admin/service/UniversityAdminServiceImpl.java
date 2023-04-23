@@ -34,6 +34,7 @@ public class UniversityAdminServiceImpl implements UniversityAdminService {
      * получить список университетов
      */
     @Override
+    @Transactional
     public List<UniversityDto> getAll() {
         return toUniversityDtoList(universityRepository.findAll());
     }
@@ -42,6 +43,7 @@ public class UniversityAdminServiceImpl implements UniversityAdminService {
      * получить университет по айди
      */
     @Override
+    @Transactional
     public UniversityDto getById(Long universityId) {
         return toUniversityDto(
                 universityRepository.findById(universityId)
@@ -52,6 +54,7 @@ public class UniversityAdminServiceImpl implements UniversityAdminService {
      * изменить университет по айди
      */
     @Override
+    @Transactional
     public UniversityDto updateById(Long universityId, University university) {
         return universityRepositoryImpl.update(universityId, university);
     }
@@ -60,6 +63,7 @@ public class UniversityAdminServiceImpl implements UniversityAdminService {
      * удалить университет по айди
      */
     @Override
+    @Transactional
     public void delete(Long universityId) {
         universityRepository.findById(universityId)
                 .orElseThrow(() -> new UniversityNotFoundException("University not found"));
@@ -70,6 +74,7 @@ public class UniversityAdminServiceImpl implements UniversityAdminService {
      * удалить все университеты
      */
     @Override
+    @Transactional
     public void deleteAll() {
         universityRepository.deleteAll();
     }

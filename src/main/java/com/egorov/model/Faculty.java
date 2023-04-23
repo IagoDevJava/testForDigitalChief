@@ -6,7 +6,6 @@ import lombok.experimental.FieldDefaults;
 import javax.persistence.*;
 
 @Getter
-@Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,4 +24,20 @@ public class Faculty {
     String workStatus;
     @Column(name = "university_id", nullable = false)
     Long universityId;
+
+    public void setName(String name) {
+        if (name != null) this.name = name;
+    }
+
+    public void setEmployeeId(Long employeeId) {
+        if (employeeId != null) this.employeeId = employeeId;
+    }
+
+    public void setWorkStatus(String workStatus) {
+        if (workStatus != null) this.workStatus = workStatus;
+    }
+
+    public void setUniversityId(Long universityId) {
+        if (universityId != null) this.universityId = universityId;
+    }
 }

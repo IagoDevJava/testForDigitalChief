@@ -1,10 +1,13 @@
 package com.egorov.repository;
 
+import com.egorov.dto.FacultyDto;
 import com.egorov.exception.FacultyNotFoundException;
 import com.egorov.model.Faculty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
+
+import static com.egorov.mapper.FacultyMapper.toFacultyDto;
 
 @Component
 public class FacultyRepositoryImpl {
@@ -18,7 +21,7 @@ public class FacultyRepositoryImpl {
     /**
      * изменить факультет по айди
      */
-    public Faculty updateById(Long facultyId, Faculty faculty) {
+    public FacultyDto updateById(Long facultyId, Faculty faculty) {
         Faculty facultyById = facultyRepository
                 .findById(facultyId).orElseThrow(() -> new FacultyNotFoundException("Faculty not found"));
 
@@ -28,6 +31,6 @@ public class FacultyRepositoryImpl {
         facultyById.setWorkStatus(faculty.getWorkStatus());
 
         Faculty save = facultyRepository.save(facultyById);
-        return save;
+        return toFacultyDto(save);
     }
 }

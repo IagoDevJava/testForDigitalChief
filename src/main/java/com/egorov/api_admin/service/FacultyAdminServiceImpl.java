@@ -37,6 +37,7 @@ public class FacultyAdminServiceImpl implements FacultyAdminService {
      * получить список факультетов
      */
     @Override
+    @Transactional
     public List<FacultyDto> getAll(Long universityId) {
         universityAdminService.getById(universityId);
         List<FacultyDto> result = new ArrayList<>();
@@ -51,6 +52,7 @@ public class FacultyAdminServiceImpl implements FacultyAdminService {
      * получить факультет по айди
      */
     @Override
+    @Transactional
     public FacultyDto getById(Long universityId, Long facultyId) {
         universityAdminService.getById(universityId);
         return toFacultyDto(facultyRepository.findById(facultyId)
@@ -61,15 +63,17 @@ public class FacultyAdminServiceImpl implements FacultyAdminService {
      * изменить факультет по айди
      */
     @Override
+    @Transactional
     public FacultyDto updateById(Long facultyId, Faculty faculty, Long universityId) {
         universityAdminService.getById(universityId);
-        return toFacultyDto(facultyRepositoryImpl.updateById(facultyId, faculty));
+        return facultyRepositoryImpl.updateById(facultyId, faculty);
     }
 
     /**
      * удалить факультет по айди
      */
     @Override
+    @Transactional
     public void delete(Long universityId, Long facultyId) {
         universityAdminService.getById(universityId);
         facultyRepository.deleteById(facultyId);
@@ -79,6 +83,7 @@ public class FacultyAdminServiceImpl implements FacultyAdminService {
      * удалить все факультеты университета
      */
     @Override
+    @Transactional
     public void deleteAll(Long universityId) {
         universityAdminService.getById(universityId);
         facultyRepository.deleteFacultiesByUniversityId(universityId);
